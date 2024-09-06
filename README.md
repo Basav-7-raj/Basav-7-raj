@@ -1,0 +1,5 @@
+- 👋 Hi, I’m Basavraj
+-    huge advocate to open sourse
+- 🌱 I’m currently learning java 
+- 💞️ I’m looking to collaborate on app building 
+- 📫 How to reach me instagram,linkdin
