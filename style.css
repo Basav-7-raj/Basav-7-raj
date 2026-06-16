@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#galaxy {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Base styles for stars generated via JS */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+#solar-system {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    z-index: 1;
+    transform: scale(0.8); /* Scale down slightly for smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sun {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ffd700, #ff8c00);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ff8c00;
+    z-index: 100;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.planet-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate infinite linear;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 20;
+}
+
+.planet:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px white;
+    z-index: 30;
+}
+
+.planet-label {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-top: -20px;
+    white-space: nowrap;
+}
+
+.planet-container:hover .planet-label {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal Styles */
+#info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#info-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background-color: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 1px solid #16213e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #e94560;
+}
+
+#close-modal:hover {
+    color: #ff6b81;
+}
+
+h2 {
+    margin-top: 0;
+    color: #0f3460;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.planet-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#planet-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #ccc;
+}

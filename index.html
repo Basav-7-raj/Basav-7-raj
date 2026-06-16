@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="galaxy">
+        <div id="stars"></div>
+        <div id="solar-system">
+            <!-- Sun -->
+            <div id="sun"></div>
+            <!-- Planetary orbits and planets will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Modal for planet information -->
+    <div id="info-modal" class="hidden">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2 id="planet-name">Planet Name</h2>
+            <div class="planet-details">
+                <p><strong>Type:</strong> <span id="planet-type"></span></p>
+                <p><strong>Distance from Sun:</strong> <span id="planet-distance"></span></p>
+                <p><strong>Radius:</strong> <span id="planet-radius"></span></p>
+                <p><strong>Orbital Period:</strong> <span id="planet-period"></span></p>
+                <p><strong>Moons:</strong> <span id="planet-moons"></span></p>
+            </div>
+            <p id="planet-description">Description goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
