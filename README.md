@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./Basavaraj%20Bolegaon%20Tech%20Banner.png" width="100%" alt="Basavaraj Bolegaon">
+</p>
+
 # Hey there! 👋 I'm Basavraj
 
 ### CSE (Data Science) Student | Aspiring Data Scientist | Python & Machine Learning Developer
